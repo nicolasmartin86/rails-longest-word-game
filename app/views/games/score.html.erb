@@ -1,0 +1,13 @@
+
+<h1>Result</h1>
+
+<% if !@within_grid %>
+<p><%= "Sorry but " %><strong><%= @answer.capitalize %></strong><%= " can't be built out of #{@letters}." %></p>
+<% elsif !@call_api %>
+<p><%= "Sorry but " %><strong><%= @answer.capitalize %></strong><%= " does not seem to be a valid English word." %></p>
+<% else %>
+<p><%= "Congratulations! " %><strong><%= @answer.capitalize %></strong><%= " is a valid English word." %></p>
+<% end %>
+
+<%= link_to "Play again", new_path  %>
+
